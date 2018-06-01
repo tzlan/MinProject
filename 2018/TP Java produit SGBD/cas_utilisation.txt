@@ -1,0 +1,28 @@
+ *******************************************************************************
+                      CAS D'UTILISATION TP JAVA PRODUIT
+                      17/04/2018
+                      @avimimoun
+********************************************************************************
+17/04/2018 17:43:51
+AJOUTER UNE COMMANDE 
+    1. Le systeme affiche le menu général 
+    2. L'utilisateur choisit "Ajouter commande"
+    3. Le système demande la saisie des infos : numero-commande, date, id-client
+    4. L'utilisateur entre les informations demandées
+    5. Le système demande les infos sur un produit (id, qte)
+    6. L'utilisateur entre les informations demandées 
+    7. Le système demande à l'utilisateur s'il veut continuer
+    8. L'utilisateur choisit de continuer (retour à l'etape 5) ou de s'arreter
+    9. Le système enregistre et retourne un message
+    Exception
+    6.1 Si id prod n'existe pas : message d'erreurs
+    4.1 Si le numero de commande existe deja : message d'erreurs
+    4.1 Si id client n'existe pas : message d'erreurs
+
+17/04/2018 17:55:26
+RECHERCHER UNE COMMANDE
+    1. Le systeme affiche le menu général 
+    2. L'utilisateur choisit "Rechercher commande"
+    3. Le système demande le numero commande
+    4. L'utilisateur entre numero commande
+    5. Le système affiche la commande recherchée 
