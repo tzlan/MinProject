@@ -47,10 +47,6 @@ class Bdd
 			// Etablissement de la connexion avec la base
 	
 		}
-		catch (SQLException c)
-		{	
-			System.out.println ("Connexion refusee ou base inconnue");
-		}
 		catch (Exception d)
 		{
 			System.out.println ("Probleme de connexion");		
