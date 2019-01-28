@@ -1,7 +1,6 @@
 package chat;
 
 /**
- * @(#)Bdd.java
  *
  *
  * @author 

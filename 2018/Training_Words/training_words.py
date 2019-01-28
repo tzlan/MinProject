@@ -23,6 +23,7 @@ SOFTWARE.
 """
 import os 
 import random
+import sys
 
 def readFile(file):
   print("""https://www.github.com/av1m\n
@@ -50,6 +51,7 @@ def readFile(file):
   for key, mots in sorted(phrases.items(), key=lambda x: random.random()):
       if ang_fr == 1: 
         input(mots[1][1:-1].capitalize() + " : ")
+        print()
         print("---   " + mots[0].capitalize())
       else:
         input(mots[0].capitalize() + " : ")
@@ -66,17 +68,22 @@ def OpenFile():
   readFile(file)
 
 try:
-  from tknter import *
-  from tkinter.filedialog import askopenfilename
-  root = Tk()
-  root.geometry("235x35+100+0")
-  root.resizable(False, False)
-  root.iconbitmap('ico.ico')
-  Title = root.title( "File Opener")
-  button = Button(text="Select file!", font=("Ubuntu 10 bold"), fg="black", command = OpenFile)
-  button.pack()
-  root.mainloop()
-except:
-  file = input("Enter full path to the file : ")
-  readFile(file)
-  
+  if sys.argv[1] == "-f":
+    print(readFile(sys.argv[2]))
+  if sys.argv[1] == "-h" or sys.argv[1] == "--help":
+    print("-f  :   Entry path to file\n-h or --help for help")
+except IndexError:
+  try:
+    from tkinter import *
+    from tkinter.filedialog import askopenfilename
+    root = Tk()
+    root.geometry("235x35+100+0")
+    root.resizable(False, False)
+    root.iconbitmap('ico.ico')
+    Title = root.title( "File Opener")
+    button = Button(text="Select file!", font=("Ubuntu 10 bold"), fg="black", command = OpenFile)
+    button.pack()
+    root.mainloop()
+  except:
+    file = input("Enter full path to the file : ")
+    readFile(file)
